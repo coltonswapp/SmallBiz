@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		75FA248128B93CE000F09041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA248028B93CE000F09041 /* AppDelegate.swift */; };
 		75FA248328B93CE000F09041 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA248228B93CE000F09041 /* SceneDelegate.swift */; };
-		75FA248528B93CE000F09041 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA248428B93CE000F09041 /* ViewController.swift */; };
+		75FA248528B93CE000F09041 /* EmployeesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA248428B93CE000F09041 /* EmployeesListViewController.swift */; };
 		75FA248828B93CE000F09041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75FA248628B93CE000F09041 /* Main.storyboard */; };
 		75FA248A28B93CE300F09041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75FA248928B93CE300F09041 /* Assets.xcassets */; };
 		75FA248D28B93CE300F09041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75FA248B28B93CE300F09041 /* LaunchScreen.storyboard */; };
+		75FA249A28B949D100F09041 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA249928B949D100F09041 /* Employee.swift */; };
+		75FA249C28B951E100F09041 /* EmployeeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA249B28B951E100F09041 /* EmployeeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		75FA247D28B93CE000F09041 /* SmallBiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmallBiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75FA248028B93CE000F09041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75FA248228B93CE000F09041 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		75FA248428B93CE000F09041 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		75FA248428B93CE000F09041 /* EmployeesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesListViewController.swift; sourceTree = "<group>"; };
 		75FA248728B93CE000F09041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75FA248928B93CE300F09041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75FA248C28B93CE300F09041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75FA248E28B93CE300F09041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75FA249928B949D100F09041 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		75FA249B28B951E100F09041 /* EmployeeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		75FA247F28B93CE000F09041 /* SmallBiz */ = {
 			isa = PBXGroup;
 			children = (
-				75FA248028B93CE000F09041 /* AppDelegate.swift */,
-				75FA248228B93CE000F09041 /* SceneDelegate.swift */,
-				75FA248428B93CE000F09041 /* ViewController.swift */,
-				75FA248628B93CE000F09041 /* Main.storyboard */,
-				75FA248928B93CE300F09041 /* Assets.xcassets */,
-				75FA248B28B93CE300F09041 /* LaunchScreen.storyboard */,
-				75FA248E28B93CE300F09041 /* Info.plist */,
+				75FA249828B9480500F09041 /* Resources */,
+				75FA249728B947FF00F09041 /* Models */,
+				75FA249628B947F500F09041 /* ModelControllers */,
+				75FA249528B947EF00F09041 /* ViewControllers */,
+				75FA249428B947E900F09041 /* Storyboards */,
 			);
 			path = SmallBiz;
+			sourceTree = "<group>";
+		};
+		75FA249428B947E900F09041 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				75FA248628B93CE000F09041 /* Main.storyboard */,
+				75FA248B28B93CE300F09041 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		75FA249528B947EF00F09041 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				75FA248428B93CE000F09041 /* EmployeesListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		75FA249628B947F500F09041 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				75FA249B28B951E100F09041 /* EmployeeController.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		75FA249728B947FF00F09041 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				75FA249928B949D100F09041 /* Employee.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		75FA249828B9480500F09041 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				75FA248028B93CE000F09041 /* AppDelegate.swift */,
+				75FA248228B93CE000F09041 /* SceneDelegate.swift */,
+				75FA248928B93CE300F09041 /* Assets.xcassets */,
+				75FA248E28B93CE300F09041 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75FA248528B93CE000F09041 /* ViewController.swift in Sources */,
+				75FA248528B93CE000F09041 /* EmployeesListViewController.swift in Sources */,
+				75FA249A28B949D100F09041 /* Employee.swift in Sources */,
 				75FA248128B93CE000F09041 /* AppDelegate.swift in Sources */,
+				75FA249C28B951E100F09041 /* EmployeeController.swift in Sources */,
 				75FA248328B93CE000F09041 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +337,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X89M6X46Y8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SmallBiz/Info.plist;
+				INFOPLIST_FILE = SmallBiz/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +365,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X89M6X46Y8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SmallBiz/Info.plist;
+				INFOPLIST_FILE = SmallBiz/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
