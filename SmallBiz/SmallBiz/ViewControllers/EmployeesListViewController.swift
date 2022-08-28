@@ -42,6 +42,7 @@ class EmployeesListViewController: UIViewController {
         
         EmployeeController.shared.addEmployee(firstName: fullName[0], lastName: fullName[1])
         employeeTextField.text = ""
+        employeeTextField.resignFirstResponder()
         tableView.reloadData()
     }
     
@@ -69,11 +70,27 @@ extension EmployeesListViewController: UITableViewDelegate, UITableViewDataSourc
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            self.tableView.deselectRow(at: indexPath, animated: false)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let employeeToDelete = EmployeeController.shared.employees[indexPath.row]
             EmployeeController.shared.delete(employee: employeeToDelete)
             tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toEmployeeTask" {
+            guard let destination = segue.destination as? EmployeeTaskListViewController,
+                  let index = tableView.indexPathForSelectedRow else { return }
+            
+            let employeeToSend = EmployeeController.shared.employees[index.row]
+            destination.employee = employeeToSend
         }
     }
 }

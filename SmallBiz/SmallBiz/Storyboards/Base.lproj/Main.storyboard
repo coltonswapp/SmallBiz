@@ -129,6 +129,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="1eM-B5-zxG" kind="show" identifier="toEmployeeTask" id="yFt-wn-PdV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -154,6 +157,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oG8-Sk-WSJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1630.4347826086957" y="1622.5446428571429"/>
+        </scene>
+        <!--EmployeeTaskList-->
+        <scene sceneID="xsf-Xu-14U">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EmployeeTaskList" id="1eM-B5-zxG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dKN-c6-SOh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NO4-uJ-cch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-981" y="1585"/>
         </scene>
     </scenes>
     <resources>

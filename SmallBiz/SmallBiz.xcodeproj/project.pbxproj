@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		759CA0DD28BAD483004289E1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759CA0DC28BAD483004289E1 /* Task.swift */; };
+		759CA0DF28BAD8EE004289E1 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759CA0DE28BAD8EE004289E1 /* TaskController.swift */; };
+		759CA0E128BAF1AE004289E1 /* EmployeeTaskList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 759CA0E028BAF1AE004289E1 /* EmployeeTaskList.storyboard */; };
+		759CA0E328BAFAE5004289E1 /* EmployeeTaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759CA0E228BAFAE5004289E1 /* EmployeeTaskListViewController.swift */; };
 		75FA248128B93CE000F09041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA248028B93CE000F09041 /* AppDelegate.swift */; };
 		75FA248328B93CE000F09041 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA248228B93CE000F09041 /* SceneDelegate.swift */; };
 		75FA248528B93CE000F09041 /* EmployeesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FA248428B93CE000F09041 /* EmployeesListViewController.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		759CA0DC28BAD483004289E1 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		759CA0DE28BAD8EE004289E1 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
+		759CA0E028BAF1AE004289E1 /* EmployeeTaskList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmployeeTaskList.storyboard; sourceTree = "<group>"; };
+		759CA0E228BAFAE5004289E1 /* EmployeeTaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTaskListViewController.swift; sourceTree = "<group>"; };
 		75FA247D28B93CE000F09041 /* SmallBiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmallBiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75FA248028B93CE000F09041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75FA248228B93CE000F09041 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				75FA248628B93CE000F09041 /* Main.storyboard */,
+				759CA0E028BAF1AE004289E1 /* EmployeeTaskList.storyboard */,
 				75FA248B28B93CE300F09041 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -82,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				75FA248428B93CE000F09041 /* EmployeesListViewController.swift */,
+				759CA0E228BAFAE5004289E1 /* EmployeeTaskListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -90,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				75FA249B28B951E100F09041 /* EmployeeController.swift */,
+				759CA0DE28BAD8EE004289E1 /* TaskController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -98,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				75FA249928B949D100F09041 /* Employee.swift */,
+				759CA0DC28BAD483004289E1 /* Task.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75FA248D28B93CE300F09041 /* LaunchScreen.storyboard in Resources */,
+				759CA0E128BAF1AE004289E1 /* EmployeeTaskList.storyboard in Resources */,
 				75FA248A28B93CE300F09041 /* Assets.xcassets in Resources */,
 				75FA248828B93CE000F09041 /* Main.storyboard in Resources */,
 			);
@@ -184,10 +197,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				759CA0DF28BAD8EE004289E1 /* TaskController.swift in Sources */,
 				75FA248528B93CE000F09041 /* EmployeesListViewController.swift in Sources */,
 				75FA249A28B949D100F09041 /* Employee.swift in Sources */,
 				75FA248128B93CE000F09041 /* AppDelegate.swift in Sources */,
 				75FA249C28B951E100F09041 /* EmployeeController.swift in Sources */,
+				759CA0E328BAFAE5004289E1 /* EmployeeTaskListViewController.swift in Sources */,
+				759CA0DD28BAD483004289E1 /* Task.swift in Sources */,
 				75FA248328B93CE000F09041 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
