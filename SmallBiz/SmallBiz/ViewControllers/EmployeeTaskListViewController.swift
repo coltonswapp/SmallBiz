@@ -53,13 +53,11 @@ extension EmployeeTaskListViewController: UITableViewDataSource, UITableViewDele
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as? TaskTableViewCell else { return UITableViewCell() }
         
         let task = employee.tasks[indexPath.row]
-        
-        var content = cell.defaultContentConfiguration()
-        content.text = task.title
-        cell.contentConfiguration = content
+        cell.task = task
+        cell.delegate = self
         return cell
     }
     
@@ -69,5 +67,12 @@ extension EmployeeTaskListViewController: UITableViewDataSource, UITableViewDele
             TaskController.deleteTaskFrom(employee, taskToDelete)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+    }
+}
+
+extension EmployeeTaskListViewController: TaskStatusChangedProtocol {
+    func updateTaskStatus(task: Task) {
+        TaskController.toggleTaskStatus(employee: employee, task: task)
+        tableView.reloadData()
     }
 }
