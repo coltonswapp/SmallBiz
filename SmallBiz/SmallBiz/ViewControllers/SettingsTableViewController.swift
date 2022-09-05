@@ -17,7 +17,8 @@ class SettingsTableViewController: UITableViewController {
     lazy var datasource: [SettingsItem] = {
         var item = SettingsItem(settingTitle: "New Employee default items", isActive: false, type: .toggleSwitch)
         item.readDefaults()
-        return [item]
+        var secondItem = SettingsItem(settingTitle: "Default Items", isActive: false, type: .disclosure)
+        return [item, secondItem]
     }()
 
     // MARK: - Table view data source
@@ -34,14 +35,23 @@ class SettingsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "settingsCell", for: indexPath) as? SettingsTableViewCell else { return UITableViewCell() }
-
-        let item = datasource[indexPath.row]
         
-        cell.item = item
-        cell.delegate = self
+        let item = datasource[indexPath.row]
 
-        return cell
+        switch item.type {
+            
+        case .toggleSwitch:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "settingsCell", for: indexPath) as? SettingsTableViewCell else { return UITableViewCell() }
+            cell.item = item
+            cell.delegate = self
+            return cell
+            
+        case .disclosure:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "disclosureCell", for: indexPath) as? DisclosureTableViewCell else { return UITableViewCell() }
+            cell.disclosureCellLabel.text = item.settingTitle
+            
+            return cell
+        }
     }
 }
 
@@ -66,4 +76,5 @@ struct SettingsItem {
 
 enum SettingCellType {
     case toggleSwitch
+    case disclosure
 }

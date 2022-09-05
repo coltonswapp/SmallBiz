@@ -16,7 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" systemColor="labelColor"/>
                         <color key="selectedImageTintColor" systemColor="labelColor"/>
                     </tabBar>
                     <connections>
@@ -90,6 +89,36 @@
                                 <connections>
                                     <outlet property="settingsNameLabel" destination="BhF-B3-yPo" id="PSO-ce-90k"/>
                                     <outlet property="settingsSwitch" destination="n7i-7I-PfW" id="qox-89-j83"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="disclosureCell" rowHeight="80" id="80v-kY-gca" customClass="DisclosureTableViewCell" customModule="SmallBiz" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="124.5" width="414" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="80v-kY-gca" id="UJ6-gF-Kyu">
+                                    <rect key="frame" x="0.0" y="0.0" width="385.5" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qC6-cE-kPC">
+                                            <rect key="frame" x="20" y="30" width="347" height="20.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTr-P9-M2E">
+                                                    <rect key="frame" x="0.0" y="0.0" width="347" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qC6-cE-kPC" firstAttribute="leading" secondItem="UJ6-gF-Kyu" secondAttribute="leadingMargin" id="Uvl-Td-HQr"/>
+                                        <constraint firstItem="qC6-cE-kPC" firstAttribute="width" secondItem="UJ6-gF-Kyu" secondAttribute="width" multiplier="0.9" id="XIh-AX-WEF"/>
+                                        <constraint firstItem="qC6-cE-kPC" firstAttribute="centerY" secondItem="UJ6-gF-Kyu" secondAttribute="centerY" id="ht5-Vh-iSe"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="disclosureCellLabel" destination="xTr-P9-M2E" id="rma-65-ROn"/>
+                                    <segue destination="VlU-z0-pVK" kind="show" id="Wid-5d-JQJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -208,6 +237,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NO4-uJ-cch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-981" y="1585"/>
+        </scene>
+        <!--DefaultTaskItems-->
+        <scene sceneID="110-wz-xy4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DefaultTaskItems" id="VlU-z0-pVK" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="aeP-ps-mv3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tzx-Zi-Za4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1404" y="1623"/>
         </scene>
     </scenes>
     <resources>

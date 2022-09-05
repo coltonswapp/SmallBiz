@@ -15,10 +15,22 @@ class EmployeeController {
     // Source of Truth
     var employees: [Employee] = []
     
+    var defaultItems: [String] = [
+        "Payroll",
+        "Onboarding",
+        "Employee Profile",
+        "Work shoes",
+    ]
+    
     // MARK: - CRUD
     func addEmployee(firstName: String, lastName: String) {
         // Declare a new employee object
         let newEmployee = Employee(firstName: firstName, lastName: lastName)
+        
+        if UserDefaults.standard.bool(forKey: "New Employee default items") {
+            let tasks: [Task] = defaultItems.compactMap ( { Task(title: $0) })
+            newEmployee.tasks = tasks
+        }
         
         // Add that employee to our source of truth
         employees.append(newEmployee)
